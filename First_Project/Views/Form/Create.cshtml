@@ -1,0 +1,44 @@
+﻿@model Form
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create New Data</h2>
+            <hr/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Mobile"></label>
+            <input asp-for="Mobile" class="form-control" /> 
+            <span asp-validation-for="Mobile" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Gender" class="control-label"></label><br />
+                Male:   @Html.RadioButton("Gender","Male")  
+                Female: @Html.RadioButton("Gender","Female") 
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Province"></label>
+            <input asp-for="Province" class="form-control" /> 
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="IsActive"></label>
+            @Html.CheckBoxFor(m => m.IsActive) 
+            <span asp-validation-for="District" class="text-danger"></span>
+        </div>
+         <button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
+
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">Back To List</a> 
+    </div>
+</form>
