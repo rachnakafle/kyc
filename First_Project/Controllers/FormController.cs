@@ -28,5 +28,17 @@ namespace First_Project.Controllers
         {
             return View();
         }
+
+        //POST - For Post Form
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Form obj)
+        {
+            _db.FormTable.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
