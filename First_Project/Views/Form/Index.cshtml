@@ -12,33 +12,35 @@
 </div>
 <hr/>
 
-<table class="table table-bordered table-striped" style="width:100%">
-    <thead>
-        <tr>
-            <th>CustomerId</th>
-            <th>Name</th>
-            <th>Mobile</th>
-            <th>Gender</th>
-            <th>IsActive</th>
-            <th>Province</th>
-            <th>District</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var item in Model)
-        {
-           <tr>
-               <td width="50%">@item.CustomerId</td>
-               <td width="50%">@item.Name</td>
-               <td width="50%">@item.Mobile</td>
-               <td width="50%">@item.Gender</td>
-               <td width="50%">@item.IsActive</td>
-               <td width="50%">@item.Province</td>
-               <td width="50%">@item.District</td>
-           </tr>
-        }
-    </tbody>
-</table>
+<div class="col-12">
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>CustomerId</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Gender</th>
+                <th>IsActive</th>
+                <th>Province</th>
+                <th>District</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+               <tr>
+                   <td width="50%">@item.CustomerId</td>
+                   <td width="50%">@item.Name</td>
+                   <td width="50%">@item.Mobile</td>
+                   <td width="50%">@item.Gender</td>
+                   <td width="50%">@item.IsActive</td>
+                   <td width="50%">@item.Province</td>
+                   <td width="50%">@item.District</td>
+               </tr>
+            }
+        </tbody>
+    </table>
+</div>
 @*<div class="row">
     <div class="col-md-4">
         <form asp-action="Index">

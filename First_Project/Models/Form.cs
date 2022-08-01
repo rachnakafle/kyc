@@ -15,14 +15,14 @@ namespace First_Project.Models
         public string District { get; set; }
     }
 
-    //public enum Province
-    //{
-    //    Province1,
-    //    Province2,
-    //    Province3,
-    //    Gandaki,
-    //    Province5,
-    //    Karnali,
-    //    Sudurpashchim
-    //}
+    public enum Province 
+    {
+        Province1,
+        Province2,
+        Province3,
+        Gandaki,
+        Province5,
+        Karnali,
+        Sudurpashchim
+    }
 }

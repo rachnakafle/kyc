@@ -34,9 +34,13 @@ namespace First_Project.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Form obj)
         {
-            _db.FormTable.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _db.FormTable.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
         }
 
 
