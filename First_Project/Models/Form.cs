@@ -13,7 +13,7 @@ namespace First_Project.Models
 
         [Display(Name = "DOB(AD)")]
         [Required]
-        public string DOB { get; set; }
+        public DateTime DOB { get; set; }
         public string Gender { get; set; }
 
         [Display(Name = "Email Address")]
