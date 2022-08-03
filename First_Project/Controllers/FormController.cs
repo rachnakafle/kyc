@@ -18,7 +18,7 @@ namespace First_Project.Controllers
         //GET
         public IActionResult Index()
         {
-            List<Form> form = _db.FormTable.ToList(); 
+            List<Form> form = _db.FormTable.ToList();
             return View(form);
         }
 
@@ -26,6 +26,8 @@ namespace First_Project.Controllers
         //GET - For Create Form
         public IActionResult Create()
         {
+            //List<Form> province = _db.province();
+         //   pl = (from c in _db.province select c).ToList();
             return View();
         }
 
@@ -42,7 +44,6 @@ namespace First_Project.Controllers
             }
             return View(obj);
         }
-
 
     }
 }

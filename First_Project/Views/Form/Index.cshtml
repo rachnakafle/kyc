@@ -16,24 +16,35 @@
     <table class="table table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>CustomerId</th>
-                <th>Name</th>
-                <th>Mobile</th>
+                <th>FullName</th>
+                <th>DOB</th>
                 <th>Gender</th>
-                <th>IsActive</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+                <th>FatherName</th>
+                <th>MotherName</th>
+                <th>GrandFatherName</th>
+                <th>Occupation</th>
+                <th>Nationality</th>
                 <th>Province</th>
                 <th>District</th>
+                
             </tr>
         </thead>
         <tbody>
             @foreach(var item in Model)
             {
                <tr>
-                   <td width="50%">@item.CustomerId</td>
-                   <td width="50%">@item.Name</td>
-                   <td width="50%">@item.Mobile</td>
+                   <td width="50%">@item.FullName</td>
+                   <td width="50%">@item.DOB</td>
                    <td width="50%">@item.Gender</td>
-                   <td width="50%">@item.IsActive</td>
+                   <td width="50%">@item.Email</td>
+                   <td width="50%">@item.PhoneNumber</td>
+                   <td width="50%">@item.FatherName</td>
+                   <td width="50%">@item.MotherName</td>
+                   <td width="50%">@item.GrandFatherName</td>
+                   <td width="50%">@item.Occupation</td>
+                   <td width="50%">@item.Nationality</td>
                    <td width="50%">@item.Province</td>
                    <td width="50%">@item.District</td>
                </tr>
@@ -41,52 +52,3 @@
         </tbody>
     </table>
 </div>
-@*<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Index">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Mobile" class="control-label"></label>
-                <input asp-for="Mobile" class="form-control" />
-                <span asp-validation-for="Mobile" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Gender" class="control-label"></label><br />
-                Male @Html.RadioButtonFor(m=>m.Gender,"Male")
-                Female @Html.RadioButtonFor(m=>m.Gender,"Female")
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Province" class="control-label"></label><br />
-                @Html.DropDownListFor(m => m.Province, new SelectList(Enum.GetValues(typeof(Province))))
-                <span asp-validation-for="Province" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="District" class="control-label"></label>
-                <input asp-for="District" class="form-control" />
-                <span asp-validation-for="District" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="IsActive" class="control-label"></label>
-                @Html.CheckBoxFor(m => m.IsActive)
-                <span asp-validation-for="IsActive" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-*@
-

@@ -1,5 +1,7 @@
 ﻿using First_Project.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 
 namespace First_Project.Data
 {
@@ -11,5 +13,12 @@ namespace First_Project.Data
         } 
 
         public DbSet<Form> FormTable { get; set; }
+        //public DbSet<ExtraDetails> extra_details { get; set; }
+        //public DbSet<Form> province { get; set; }
+
+        //internal List<Form> province()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
