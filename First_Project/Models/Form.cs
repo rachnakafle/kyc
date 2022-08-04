@@ -1,4 +1,5 @@
-﻿using System;
+﻿using First_Project.Enum;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace First_Project.Models
@@ -14,6 +15,7 @@ namespace First_Project.Models
         [Display(Name = "DOB(AD)")]
         [Required]
         public DateTime DOB { get; set; }
+        [Required]
         public string Gender { get; set; }
 
         [Display(Name = "Email Address")]
@@ -40,22 +42,25 @@ namespace First_Project.Models
         [Required]
         public string GrandFatherName { get; set; }
 
-        [Required]
+        
         public string Occupation { get; set; }
 
-        [Required]
+        
         public string Nationality { get; set; }
 
         //Current Address Information
 
-        [Required]
-        public string Province { get; set; }
-        
-        [Required]
+        public ProvinceEnum Province { get; set; }
         public string District { get; set; }
+
+        [Display(Name = "Municipality or Gaupalika")]
         public string Municipality { get; set; }
         public int WardNo { get; set; }
+
+        [Display(Name = "Street Name")] 
         public string StreetName { get; set; }
+
+        [Display(Name = "House Number")] 
         public string HouseNumber { get; set; }
 
         //Document Information
@@ -64,17 +69,6 @@ namespace First_Project.Models
         public string IssuedByState { get; set; }
         public string IssuedByDistrict { get; set; }
         public string IssueDate { get; set; }
-        public string Status { get; set; }
+        public StatusEnum Status { get; set; }
     }
-
-    //public enum Province 
-    //{
-    //    Province1,
-    //    Province2,
-    //    Province3,
-    //    Gandaki,
-    //    Province5,
-    //    Karnali,
-    //    Sudurpashchim
-    //}
 }
