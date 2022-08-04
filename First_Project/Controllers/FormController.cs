@@ -22,7 +22,6 @@ namespace First_Project.Controllers
             return View(form);
         }
 
-
         //GET - For Create Form
         public IActionResult Create()
         {
@@ -40,10 +39,9 @@ namespace First_Project.Controllers
             {
                 _db.FormTable.Add(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
             }
             return View(obj);
         }
-
     }
 }

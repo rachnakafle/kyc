@@ -6,9 +6,18 @@
     <title>@ViewData["Title"] - First_Project</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+     <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    
+    <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/dual-listbox/dist/dual-listbox.css">
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <!-- END: CSS Assets-->
 </head>
-<body>
-    <header>
+<body class="main main-1">
+    <div class="d-flex">
+    @*<div class="side-nav">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">First_Project</a>
@@ -28,21 +37,31 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="container">
+    </div>*@
+    <div class="content">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    </div>
+@*    <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - First_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer>*@
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG7gNHAhDzgYmq4-EHvM4bqW1DNj2UCuk&amp;libraries=places"></script>
+            <script src="/js/app.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
