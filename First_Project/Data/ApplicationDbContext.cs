@@ -13,6 +13,7 @@ namespace First_Project.Data
         } 
 
         public DbSet<Form> FormTable { get; set; }
+        public DbSet<ImageModel> Images { get; set; }
         //public DbSet<ExtraDetails> extra_details { get; set; }
         //public DbSet<Form> province { get; set; }
 

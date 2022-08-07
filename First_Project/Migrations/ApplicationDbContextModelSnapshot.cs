@@ -107,6 +107,24 @@ namespace First_Project.Migrations
 
                     b.ToTable("FormTable");
                 });
+
+            modelBuilder.Entity("First_Project.Models.ImageModel", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("ImageId");
+
+                    b.ToTable("Images");
+                });
 #pragma warning restore 612, 618
         }
     }

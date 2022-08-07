@@ -1,9 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
+﻿@model List<string>
+<div class="container">
+    <div class="row">
+        @foreach(var imagePath in Model)
+        {
+            <div class="col-md-3">
+                <div class="alert alert-sucess" role="alert">
+                    <img src="~/@imagePath" alt="Alternate Text" height="200px" width="205px"/>
+                   @* <a href="/Gallery/DownloadFile/?filePath=@imagePath"></a>*@
+                </div>
+            </div>
+        }
+    </div>
+</div>
 <div class="container mt-10">
     @using (Html.BeginForm("Index", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
