@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220804052042_added-new-migration")]
-    partial class addednewmigration
+    [Migration("20220807110552_uigyigy")]
+    partial class uigyigy
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -96,8 +96,8 @@ namespace First_Project.Migrations
                     b.Property<int>("Province")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("StreetName")
                         .HasColumnType("nvarchar(max)");
@@ -108,6 +108,25 @@ namespace First_Project.Migrations
                     b.HasKey("CustomerId");
 
                     b.ToTable("FormTable");
+                });
+
+            modelBuilder.Entity("First_Project.Models.ImageModel", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("ImageId");
+
+                    b.ToTable("Images");
                 });
 #pragma warning restore 612, 618
         }

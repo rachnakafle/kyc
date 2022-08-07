@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace First_Project.Migrations
 {
-    public partial class addednewmigration : Migration
+    public partial class uigyigy : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,11 +35,25 @@ namespace First_Project.Migrations
                     IssuedByState = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IssuedByDistrict = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IssueDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_FormTable", x => x.CustomerId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Images",
+                columns: table => new
+                {
+                    ImageId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    ImageName = table.Column<string>(type: "nvarchar(100)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Images", x => x.ImageId);
                 });
         }
 
@@ -47,6 +61,9 @@ namespace First_Project.Migrations
         {
             migrationBuilder.DropTable(
                 name: "FormTable");
+
+            migrationBuilder.DropTable(
+                name: "Images");
         }
     }
 }
